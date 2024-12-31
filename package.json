@@ -1,0 +1,36 @@
+{
+  "name": "@pikaz/windowTransformModule",
+  "version": "0.0.1",
+  "description": "Convert js mounted window variables to module",
+  "private": false,
+  "main": "lib/pikazLocation.js",
+  "module": "lib/pikazLocationModule.js",
+  "scripts": {
+    "build": ""
+  },
+  "keywords": [
+    "window",
+    "module",
+    "esmodule",
+    "transform"
+  ],
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pikaz-18/pikaz-location.git"
+  },
+  "author": "pikaz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pikaz-18/pikaz-location/issues"
+  },
+  "homepage": "https://github.com/pikaz-18/pikaz-location#readme",
+  "dependencies": {
+    "lz-string": "1.5.0"
+  }
+}
