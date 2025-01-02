@@ -2,13 +2,21 @@ const fs = require("fs");
 const path = require("path");
 const { compressToEncodedURIComponent } = require("lz-string");
 
+/**
+ * @description: 打包
+ * @param {*} jsCore/js代码字符串
+ * @param {*} jsPath/js文件路径
+ * @param {*} keys/导出对象key数组
+ * @param {*} outPath/打包文件输出路径
+ * @return {*}
+ */
 const createModule = ({ jsCore, jsPath, keys, outPath }) => {
   let jsStr = jsCore || "";
   if (jsPath) {
     jsStr = fs.readFileSync(jsPath, "utf-8");
   }
   const compress = compressToEncodedURIComponent(jsStr);
-  const fuc = fs.readFileSync(path.join(__dirname, "index.js"), "utf-8");
+  const fuc = fs.readFileSync(path.join(__dirname, "createModule.js"), "utf-8");
   const keysList = keys
     ? `[${keys.map((item) => `"${item}"`).join(",")}]`
     : null;
@@ -27,8 +35,4 @@ const createModule = ({ jsCore, jsPath, keys, outPath }) => {
   );
 };
 
-createModule({
-  jsPath: path.join(__dirname, "../../pikaz-excel-js/lib/pikazExcel.js"),
-  //   keys: ["excelExport", "excelImport"],
-  keys: ["pikazExcelJs"],
-});
+module.exports = createModule;

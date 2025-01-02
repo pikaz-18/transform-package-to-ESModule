@@ -303,6 +303,13 @@ var LZString = (function () {
     angular.module("LZString", []).factory("LZString", function () {
       return LZString;
     });
+/**
+ * @description: 创建module
+ * @param {String} jsCore/js代码字符串
+ * @param {String[]} keys/导出对象key数组
+ * @param {Boolean} lz/是否已压缩
+ * @return {*}
+ */
 const createModule = ({ jsCore, keys, lz }) => {
   const script = document.createElement("script");
   let coreStr = jsCore;
@@ -320,4 +327,4 @@ const createModule = ({ jsCore, keys, lz }) => {
   }
   return window;
 };
-export default createModule;
+const esmodule = createModule({ jsCore:"MYewdgzgLgBAhgEwTAvDAFHANDARgSlQD54YBqPAbgFgAoOgdwEswEQGA6AUwA84BbAA4AbLgEEkqeEhq0gA", keys:["exampleAdd"], lz: true }); export const exampleAdd=esmodule.exampleAdd;export default esmodule;

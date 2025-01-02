@@ -1,36 +1,41 @@
 {
-  "name": "@pikaz/windowTransformModule",
+  "name": "@pikaz/transform-package-to-ESModule",
   "version": "0.0.1",
   "description": "Convert js mounted window variables to module",
   "private": false,
-  "main": "lib/pikazLocation.js",
-  "module": "lib/pikazLocationModule.js",
+  "main": "build.js",
   "scripts": {
-    "build": ""
+    "build": "node example/build.js",
+    "test": "node example/koa.js"
   },
   "keywords": [
     "window",
     "module",
     "esmodule",
-    "transform"
-  ],
-  "files": [
-    "src"
+    "transform",
+    "package"
   ],
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pikaz-18/pikaz-location.git"
+    "url": "git+https://github.com/pikaz-18/transform-package-to-ESModule"
   },
   "author": "pikaz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pikaz-18/pikaz-location/issues"
+    "url": "https://github.com/pikaz-18/transform-package-to-ESModule/issues"
   },
-  "homepage": "https://github.com/pikaz-18/pikaz-location#readme",
+  "homepage": "https://github.com/pikaz-18/transform-package-to-ESModule#readme",
   "dependencies": {
     "lz-string": "1.5.0"
+  },
+  "devDependencies": {
+    "@koa/router": "^13.1.0",
+    "koa": "^2.15.3",
+    "koa-static": "^5.0.0",
+    "koa-views": "^8.1.0",
+    "koa2-connect-history-api-fallback": "^0.1.3"
   }
 }
