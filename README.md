@@ -2,9 +2,11 @@
 
 现有部分前端依赖库仅支持通过 `<script>` 标签引入，尚未提供对 ESModule (ECMAScript 模块) 的原生支持。本项目可将这些库/代码转化为能够以 ESModule 形式被导入和使用，同时保持原有的功能性和兼容性，从而快速兼容至 vite 等现代打包器。
 
-## [demo 打包代码配置点击这里 copy，或执行 npm run build](https://github.com/pikaz-18/transform-package-to-ESModule/blob/master/example/build.js)
+## [demo 打包代码配置点击这里 copy](https://github.com/pikaz-18/transform-package-to-ESModule/blob/master/example/build.js)
 
-## [demo 使用打包产物代码点击这里查看，或执行 npm run test](https://github.com/pikaz-18/transform-package-to-ESModule/blob/master/example/index.html)
+## [demo 使用打包产物代码点击这里查看](https://github.com/pikaz-18/transform-package-to-ESModule/blob/master/example/index.html)
+
+npm run build 可测试打包，npm run test 可查看打包效果
 
 ## 效果示例
 
