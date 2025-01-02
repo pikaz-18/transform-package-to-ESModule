@@ -1,6 +1,6 @@
 {
   "name": "@pikaz/transform-package-to-esmodule",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert js mounted window variables to module",
   "private": false,
   "main": "build.js",
